@@ -1,10 +1,8 @@
-function start() {
+
+function start() { //Starts a Basic Black Canvas to have something as reference
     var canvas = document.getElementById('canvas');
-    var context = document.getContext('2d');
-    canvas.width = 500;
-    canvas.height = 500;
+    var context = canvas.getContext('2d');
     context.fillStyle='black';
-    context.fill();
-    
+    context.fillRect(0,0,500,500);    
     
 }
