@@ -1,8 +1,8 @@
-import cube from '/cube.js'
-import sphere from '/sphere.js'
+import cube from '../Objects/cube.js'
+import sphere from '../Objects/sphere.js'
 
-let cube1 = new cube(0,0,20,20,"black", Math.random());
-let sphere1 = new sphere (30, 30, 10, 10, 'blue', Math.random());
+let cube1 = new cube('cube',0,0,20,20,"black", Math.random());
+let sphere1 = new sphere ('sphere',30, 30, 10, 10, 'blue', Math.random());
 
 function update(progress) {
   cube1.run();

@@ -1,8 +1,8 @@
 import GameObject from "./GameObject.js"
 
 export default class cube extends GameObject{
-  constructor(x, y, width, height, color, speed){
-    super(x,y,width,height);
+  constructor(name,x, y, width, height, color, speed){
+    super(name,x,y,width,height);
     this.color = color;
     this.speed = speed;
   }
