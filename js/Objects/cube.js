@@ -1,24 +1,23 @@
 import GameObject from "./GameObject.js"
 
 export default class cube extends GameObject{
-  constructor(name,x, y, width, height, color, speed){
-    super(name,x,y,width,height);
+  constructor(x, y, width, height, color, speed){
+    super(x,y,width,height);
     this.color = color;
-    this.speed = speed;
+    this.ySpeed = speed;
+    this.xSpeed = speed;
   }
-  
-  run(){
-    this.x += this.speed;
+  tick(){
+    this.x += this.xSpeed;
     if(this.x > canvas.width){
       this.x = 0-this.width;
     }
+    this.gravity();
   }
 
-  redraw(){
-    var canvas = document.getElementById('canvas');
-    var context = canvas.getContext('2d');
-    context.fillStyle = this.color;
-    context.fillRect(this.x, this.y, this.width, this.height);
+  redraw(canvas, ctx){
+   ctx.fillStyle = this.color;
+   ctx.fillRect(this.x, this.y, this.width, this.height);
   }
 
 }
